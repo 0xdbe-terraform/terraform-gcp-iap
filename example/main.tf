@@ -7,7 +7,7 @@ module "gcp_project" {
 }
 
 module "gcp_iap" {
-  source = "../"
+  source             = "git::https://github.com/0xdbe-terraform/terraform-gcp-iap.git?ref=v1.0.1"
   email_address      = local.email_address
   project_id         = module.gcp_project.project_id
   project_long_name  = local.project_long_name
