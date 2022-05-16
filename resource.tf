@@ -12,3 +12,7 @@ resource "google_iap_brand" "main" {
   depends_on        = [google_project_service.iap]
 }
 
+resource "google_iap_client" "main" {
+  display_name = "My App"
+  brand        =  google_iap_brand.main.name
+}
